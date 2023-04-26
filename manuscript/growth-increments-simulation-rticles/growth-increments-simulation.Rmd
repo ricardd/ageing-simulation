@@ -1,0 +1,93 @@
+---
+title: A simulation approach to evaluating the accuracy and precision trade-offs between age-length pairs and growth increments
+author:
+  - name: Daniel Ricard
+    email: Daniel.Ricard@dfo-mpo.gc.ca
+    affiliation: DFO-Gulf
+    correspondingauthor: true
+  - name: Lisa Ailloud
+    email: lisa.ailloud@noaa.gov
+    affiliation: NOAA-NMFS
+  - name: Andrea Perreault
+    email: Andrea.Perreault@dfo-mpo.gc.ca
+    affiliation: DFO-Nfld
+address:
+  - code: DFO-Gulf
+    address: Gulf Fisheries Centre, Fisheries and Oceans Canada, Moncton, NB, Canada
+  - code: NOAA-NMFS
+    address: Southeast Fisheries Science Center, Miami FL, USA
+  - code: DFO-Nfld
+    address: Northwest Atlantic Fisheries Centre, Fisheries and Oceans Canada, St. John's, NL, Canada 
+abstract: |
+  This is the abstract.
+keywords: 
+  - keyword1
+  - keyword2
+journal: "TBD"
+date: "`r Sys.Date()`"
+classoption: preprint, 3p, authoryear
+bibliography: mybibfile.bib
+linenumbers: false
+numbersections: true
+output: 
+  rticles::elsevier_article:
+    keep_tex: true
+    citation_package: natbib
+---
+
+# Introduction
+
+Measuring length of captured individuals is easier and faster than obtaining detailed information through dissection. Information about fisheries activities often consists in length frequency samples. A subset of individuals measured are subjected to more detailed sampling, including the removal of otoliths for age determination.
+
+It is important to determine the appropriate number of individuals to sample during a survey, in order to ascertain that the goals of the sampling are fulfilled. In the case of measuring fish and collecting otoliths under typical sampling protocols, the number of otoliths collected will scale with the abundance of a species, given that it follows a wide enough length distribution. The challenge is to then determine the number of otoliths that have to be aged in order to obtain reliable estimates of the age-structure of the population of interest.
+
+Under many survey protocols, otoliths are removed from captured individuals following a length-stratified sampling design. A typical protocol would be to obtain 2 otoliths for each cm length bin. The resulting number of otoliths sampled will also change if the efficiency and size selectivity of the gear change.
+
+Identifying growth annuli on a digital image and obtaining cartesian coordinates for the annual points along a chosen axis provides length proxies for each year in the life of an individual. The age-length pairs derived from growth increments are not independent of each other and are pseudo-replicates. The "back-calculation" of an individual's length over its lifetime requires that the biological intercept be defined [@Campana-1998-backcalculations]. 
+
+
+A practical arising from the collection of otoliths is how many should be aged in order to obtain reliable and unbiased estimates of growth and of age structure.
+
+We use a simulation approach to answer the following questions:
+1 - Can growth individual growth increments be used to compute catch-at-age matrices?
+
+
+# Methods
+
+## Simulation of an age-structured population
+
+The goal of the simulated observations is to maintain the uncertainty known to exist in natural systems and to harness contemporary computational power to implement robust analyses. 
+
+An age-structured population dynamics model was used to simulate observations of fish length and age. The simulation approach generates observations mimicking those obtained during survey activities and provide both a reference of the "true state" of the population and the observations from that population.
+
+\begin{equation}
+R = \bar{R}
+\end{equation}
+
+
+
+## Estimation of von Bertalanffy model parameters
+
+
+## Age-length keys and catch-at-age matrices
+
+The hybrid forward-inverse age-length key described in @10.1093/icesjms/fsz072 is used to generate catch-at-age matrices from length samples and age-length keys.
+
+
+Catch-at-age matrices used as inputs to age-structured stock assessment models are used to compute removals in the population and also as tuning indices for model fitting. 
+
+The "true" yearly age composition is available from the simulated age-structured population. The age composition estimated from age-length keys can be visually compared to the known age composition using residuals plots. Additionally, a single measure of concordance is the Relative Mean Square Error (RMSE), which reports the overall agreement between two catch-at-age matrices. 
+
+# Results
+
+## Simulations
+
+
+
+## Otolith growth increments
+
+
+# Discussion
+
+
+# References {#references .unnumbered}
